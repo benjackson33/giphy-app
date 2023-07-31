@@ -6,6 +6,7 @@ import VictoryScreen from './VictoryScreen';
 function App() {
   return (
     <div className="App">
+      <h1>Giphy App</h1>
       <SearchBar />
       <VsScreen />
       <VictoryScreen />
