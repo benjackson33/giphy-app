@@ -21,11 +21,12 @@ function App() {
 
   return (
     <div className="App">
+      <div className='gradient-background'>
       <h1>Giphy App</h1>
       <SearchBar storeParams={storeParams}/>
       {(isGameStarted && searchParams.length > 1) && <VsScreen searchTerm1 ={searchParams[0]} searchTerm2 ={searchParams[1]} removeElement={removeElement}/>}
       {(isGameStarted && searchParams.length===1) && <VictoryScreen winner={searchParams[0]}/>}
-
+      </div>
     </div>
   );
 }
