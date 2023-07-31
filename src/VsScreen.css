@@ -1,0 +1,29 @@
+.vs-screen {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.vs-item {
+  flex: 1; 
+  text-align: center;
+}
+
+.vs-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.vs-item button {
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Caprasimo', cursive;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 0 4px rgba(0, 0, 10, 10);
+}
+
+

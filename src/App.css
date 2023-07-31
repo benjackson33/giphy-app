@@ -1,3 +1,101 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Caprasimo', cursive;
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  overflow-y: auto; /* allow vertical scroll */
+  position: relative;
+  background: linear-gradient(135deg, #000000, #10114f, #2e2e8e, #4640f1, #6a38c9, #8c3dab, #b4428b, #e3476b, #b4428b, #8c3dab, #6a38c9, #4640f1, #2e2e8e, #10114f, #000000);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+}
+
+/* background */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* title */
+h1 {
+  font-size: 50px;
+  font-family: 'Caprasimo', cursive;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 0 4px rgba(0, 0, 10, 10);
+}
+
+/* Styling for the SearchBar component */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Caprasimo', cursive;
+  border: 5px solid black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Caprasimo', cursive;
+  background-color: #300596;
+  color: white; 
+  border: none; 
+  border-radius: 8px;
+  text-shadow: 2px 0 4px rgba(0, 0, 10, 10);
+  box-shadow: 2px 2px 4px rgba(0, 0, 5, 5);
+}
+
+button:hover {
+  background-color: #0565cc;
+}
+
+/* Styling for the VsScreen component */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 5, 5);
+}
+
+/* Styling for the VictoryScreen component */
+.VictoryScreen {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 20px;
 }
