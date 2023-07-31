@@ -1,9 +1,9 @@
 import { useState } from "react"
 
 
-export default function SearchBar() {
+export default function SearchBar({storeParams}) {
     const [search, setSearch] = useState('')
-    const [searchParams, setSearchParams] = useState([''])
+    // const [searchParams, setSearchParams] = useState([''])
 
     const handleTextChange = (e) => {
         setSearch(e.target.value)
@@ -11,7 +11,7 @@ export default function SearchBar() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setSearchParams(search.split(', '))
+        storeParams(search.split(', '))
     }
 
     
@@ -22,7 +22,6 @@ export default function SearchBar() {
                 <textarea value={search} onChange={handleTextChange}></textarea>
                 <button>Compete</button>
             </form>
-                {searchParams.map((param, idx) => <p key={idx}>{param}</p>)}
         </div>
     )
 }
