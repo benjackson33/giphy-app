@@ -3,7 +3,6 @@ import { useState } from "react"
 
 export default function SearchBar({storeParams}) {
     const [search, setSearch] = useState('')
-    // const [searchParams, setSearchParams] = useState([''])
 
     const handleTextChange = (e) => {
         setSearch(e.target.value)
@@ -11,7 +10,7 @@ export default function SearchBar({storeParams}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        storeParams(search.split(', '))
+        storeParams(search.split(',').map(item => item.trim()))
     }
 
     
