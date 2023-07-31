@@ -14,11 +14,16 @@ function App() {
     setIsGameStarted(true)
   }
 
+  function removeElement(index){
+    setSearchParams(params => params.filter((e, idx) => idx !== index)
+    )
+  }
+
   return (
     <div className="App">
       <h1>Giphy App</h1>
       <SearchBar storeParams={storeParams}/>
-      <VsScreen searchTerm1 ='cats' searchTerm2 ='dogs'/>
+      {(isGameStarted && searchParams.length > 1) && <VsScreen searchTerm1 ={searchParams[0]} searchTerm2 ={searchParams[1]} removeElement={removeElement}/>}
       {(isGameStarted && searchParams.length===1) && <VictoryScreen winner={searchParams[0]}/>}
 
     </div>
