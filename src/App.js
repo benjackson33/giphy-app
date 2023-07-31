@@ -7,9 +7,11 @@ import { useState } from 'react';
 function App() {
 
   const [searchParams, setSearchParams] = useState([''])
+  const [isGameStarted, setIsGameStarted] = useState(false)
   
   function storeParams(newParams){
     setSearchParams(newParams)
+    setIsGameStarted(true)
   }
 
   return (
@@ -17,7 +19,7 @@ function App() {
       <h1>Giphy App</h1>
       <SearchBar storeParams={storeParams}/>
       <VsScreen searchTerm1 ='cats' searchTerm2 ='dogs'/>
-      <VictoryScreen />
+      {(isGameStarted && searchParams.length===1) && <VictoryScreen winner={searchParams[0]}/>}
 
     </div>
   );
