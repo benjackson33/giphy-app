@@ -1,10 +1,9 @@
-import { useState } from "react"
+
 import FiveGifs from "./FiveGifs"
 import './VsScreen.css'
-import VictoryScreen from "./VictoryScreen"
+
 
 export default function VsScreen({searchTerm1, searchTerm2, removeElement}) {
-    
 
     function handleButton1(){
         removeElement(1)
@@ -14,10 +13,6 @@ export default function VsScreen({searchTerm1, searchTerm2, removeElement}) {
         removeElement(0)
     }
     
-    // const handleWinner= (selectedWinner) => {
-    //     setWinner(selectedWinner)
-    // }
-
 return (
     <div className="vs-screen">
         <div className="vs-item">
@@ -36,8 +31,6 @@ return (
                     Pick {searchTerm2}
                 </button>
             <FiveGifs searchTerm={searchTerm2} />
-
         </div>
-        {/* {winner && <VictoryScreen winner={winner} onClose={handleClosePopup}/>} */}
     </div>
 )}
